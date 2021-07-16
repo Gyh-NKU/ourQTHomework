@@ -13,6 +13,20 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QImage _image;
+     _image.load("://imgs/bk.jpg");
+     setAutoFillBackground(true);   // 这个属性一定要设置
+      QPalette pal(palette());
+       pal.setBrush(QPalette::Window, QBrush(_image.scaled(size(), Qt::IgnoreAspectRatio,
+                         Qt::SmoothTransformation)));
+      setPalette(pal);
+//    QImage _image;
+//     _image.load("://imgs/jiege.jpg");
+//     setAutoFillBackground(true);   // 这个属性一定要设置
+//      QPalette pal(palette());
+//       pal.setBrush(QPalette::Window, QBrush(_image.scaled(size(), Qt::IgnoreAspectRatio,
+//                         Qt::SmoothTransformation)));
+//       setPalette(pal);
     QDesktopWidget *desktop = qApp->desktop();
     move((desktop->width()-this->width())/2,(desktop->height()-this->height())/2);
     Add_Plan * adp = new Add_Plan;

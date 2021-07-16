@@ -18,8 +18,9 @@ Widget::Widget(QWidget *parent) :
     qsrand(uint(QTime(0,0,0).secsTo(QTime::currentTime())));
 
     connect(btn,&QPushButton::clicked,this,&Widget::slotStart);
-    this->resize(325,500);
-    this->grabKeyboard();
+    this->setFixedSize(325,500);
+    this->setWindowTitle("2048游戏");
+//    this->grabKeyboard();
 
 }
 
@@ -352,7 +353,7 @@ void Widget::myRand(){
         return;
     }
     int rand=qrand()%ni;
-    s[n[rand].i][n[rand].j]=2;
+    s[n[rand].i][n[rand].j]=2*(qrand()%2+1);
 }
 void Widget::closeEvent(QCloseEvent *){
     emit hasclosed();

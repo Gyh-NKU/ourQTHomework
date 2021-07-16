@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imgs/beauty_3.jpg</file>
+        <file>imgs/wind.jpg</file>
+        <file>imgs/2048.png</file>
+        <file>imgs/cartoon.jpg</file>
+        <file>imgs/beauty_8.jpg</file>
+        <file>imgs/dog.jpg</file>
+        <file>imgs/beauty_9.jpg</file>
+        <file>imgs/exit.png</file>
+        <file>imgs/game.png</file>
+        <file>imgs/tasks.png</file>
+        <file>imgs/tools.png</file>
+        <file>imgs/exit2.png</file>
+        <file>imgs/game2.png</file>
+        <file>imgs/tasks2.png</file>
+        <file>imgs/tools2.png</file>
+        <file>imgs/feijo.jpg</file>
+        <file>imgs/sudoku.png</file>
+        <file>imgs/bk.jpg</file>
+        <file>imgs/logo.png</file>
+        <file>imgs/calc.png</file>
+    </qresource>
+</RCC>

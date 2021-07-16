@@ -16,7 +16,7 @@ class GameCenter : public QWidget
 public:
     explicit GameCenter(QWidget *parent = nullptr);
     ~GameCenter();
-    void closeEvent(QCloseEvent *event) override;
+    void closeEvent(QCloseEvent *) override;
 
 private:
     Ui::GameCenter *ui;

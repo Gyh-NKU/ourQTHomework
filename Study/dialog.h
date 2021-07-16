@@ -13,6 +13,7 @@ public:
     LearnData(QString t,QString de,QDate time):title(t),details(de),time(time){
 
     }
+
     LearnData()=default;
 };
 namespace Ui {
@@ -26,6 +27,7 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
     LearnData getinput();
+    void setContents(const QString& title, const QString& details, const QDate& date);
     ~Dialog();
 
 private:

@@ -9,7 +9,10 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    SudokuForm.cpp \
+    SudokuWidget.cpp \
     add_plan.cpp \
+    cal_widget.cpp \
     dialog.cpp \
     gamecenter.cpp \
     main.cpp \
@@ -18,7 +21,10 @@ SOURCES += \
     widget.cpp
 
 HEADERS += \
+    SudokuForm.h \
+    SudokuWidget.h \
     add_plan.h \
+    cal_widget.h \
     dialog.h \
     gamecenter.h \
     mainwindow.h \
@@ -26,7 +32,10 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    SudokuForm.ui \
+    SudokuWidget.ui \
     add_plan.ui \
+    cal_widget.ui \
     dialog.ui \
     gamecenter.ui \
     mainwindow.ui \
@@ -39,3 +48,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES +=
+
+RESOURCES += \
+    res.qrc

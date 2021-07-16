@@ -20,5 +20,11 @@ LearnData Dialog::getinput(){
     a=ui->lineEdit->text();
     b=ui->textEdit->toPlainText();
     c=ui->dateEdit->date();
+
     return LearnData(a,b,c);
+}
+void Dialog::setContents(const QString& title, const QString& details, const QDate& date){
+    ui->dateEdit->setDate(date);
+    ui->lineEdit->setText(title);
+    ui->textEdit->setText(details);
 }
