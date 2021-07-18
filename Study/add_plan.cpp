@@ -21,6 +21,7 @@ Add_Plan::Add_Plan(QWidget *parent) :
        pal.setBrush(QPalette::Window, QBrush(_image.scaled(size(), Qt::IgnoreAspectRatio,
                          Qt::SmoothTransformation)));
       setPalette(pal);
+      //初始化数据库
     db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("learn.db");
     db.open();
@@ -84,6 +85,7 @@ Add_Plan::Add_Plan(QWidget *parent) :
         }
 
     });
+    //查询
     connect(ui->tableView,&QTableView::clicked,this,[=](const QModelIndex &index){
         this->index=index;
         curPlanName = index.siblingAtColumn(0).data().toString();
@@ -141,6 +143,7 @@ Add_Plan::Add_Plan(QWidget *parent) :
                                                  "<p align=right>创建于：%3</p>"
                                                  ).arg(curPlanName).arg(curPlanDetails).arg(curTime));
     });
+    //推迟
     connect(ui->btn_delay,&QPushButton::clicked,[=](){
        if(QMessageBox::question(this,"确认推迟吗？","确认推迟吗？")==QMessageBox::Yes){
            query->exec("select * from planinfo where planname='"+ui->comboBox->currentText()+"'");
@@ -202,6 +205,7 @@ void Add_Plan::closeEvent(QCloseEvent*){
     emit hasclosed();
 
 }
+//设置定时提醒
 void Add_Plan::setRemind(){
     query->exec("create table planremind(planname,plandetails,time,createtime,primary key(planname,plandetails,time,createtime))");
     for(int i=0;i<ui->tableView->model()->rowCount();i++){

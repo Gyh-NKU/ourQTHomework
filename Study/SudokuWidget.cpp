@@ -106,7 +106,7 @@ void NumTableWidget::process(bool show)
                     connect(&_btn[row][col],&QPushButton::clicked,[=](){
                         QString s=_btn[row][col].text();
                         QMessageBox::warning(0,tr("警告"),"该数字不可改动");
-                        QFont font(nullptr,40);
+                        QFont font(nullptr,30);
                         _btn[row][col].setFont(font);
                         _btn[row][col].setText(s);
                     });

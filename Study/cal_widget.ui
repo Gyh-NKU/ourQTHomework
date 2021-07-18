@@ -643,8 +643,8 @@ border-radius:3px;</string>
     <string/>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>D:/Mycodes/QT_Homework_2/Study/imgs/back.png</normaloff>D:/Mycodes/QT_Homework_2/Study/imgs/back.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/imgs/back.png</normaloff>:/imgs/back.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -799,6 +799,8 @@ border-radius:3px;</string>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

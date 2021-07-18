@@ -20,5 +20,6 @@
         <file>imgs/bk.jpg</file>
         <file>imgs/logo.png</file>
         <file>imgs/calc.png</file>
+        <file>imgs/back.png</file>
     </qresource>
 </RCC>
